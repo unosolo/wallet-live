@@ -1,0 +1,9 @@
+---
+source: src/feature/asset/controller_tests.rs
+expression: new_asset
+---
+{
+  "id": 1,
+  "name": "Test",
+  "unit_value": 0.0
+}

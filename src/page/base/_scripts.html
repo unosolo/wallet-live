@@ -1,0 +1,26 @@
+
+<script>
+  async function handleLogout(event) {
+      event.preventDefault();
+
+      try {
+          const response = await fetch('/auth/logout', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              }
+          });
+
+          if (response.ok) {
+              const data = await response.json();
+              if (data.redirect_url) {
+                  window.location.href = data.redirect_url;
+              }
+          } else {
+              console.error('Logout failed');
+          }
+      } catch (error) {
+          console.error('Logout error:', error);
+      }
+  }
+</script>

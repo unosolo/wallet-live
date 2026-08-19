@@ -1,0 +1,11 @@
+---
+source: src/feature/asset/controller_tests.rs
+expression: assets
+---
+[
+  {
+    "id": 1,
+    "name": "Bitcoin",
+    "unit_value": 10.0
+  }
+]

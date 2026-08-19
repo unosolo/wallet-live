@@ -1,0 +1,9 @@
+-- Add up migration script here
+CREATE TABLE IF NOT EXISTS owned_asset (
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    user_id BIGINT NOT NULL REFERENCES "user"(id) ON DELETE CASCADE,
+    asset_id BIGINT NOT NULL REFERENCES "asset"(id) ON DELETE CASCADE,
+    bought_for DOUBLE PRECISION NOT NULL,
+    quantity_owned DOUBLE PRECISION NOT NULL,
+    timestamp TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
+);

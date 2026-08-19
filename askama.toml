@@ -1,0 +1,6 @@
+[general]
+dirs = ["src/page"]
+
+[package.metadata.askama]
+templates = "page"
+reload = true

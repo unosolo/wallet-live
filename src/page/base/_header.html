@@ -1,0 +1,22 @@
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center gap-8">
+          <a href="/" class="text-xl font-bold text-gray-900">portfolio</a>
+          <div class="hidden md:flex gap-6">
+            <a href="/" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+            <a href="/assets" class="text-gray-700 hover:text-indigo-600 transition font-medium text-indigo-600">Assets</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-sm text-gray-600">Welcome, <strong>{{ user.username() }}</strong></span>
+          <a href="/login" class="text-gray-700 hover:text-indigo-600 transition text-sm">Login</a>
+          <a href="#" onclick="handleLogout(event)" class="text-gray-700 hover:text-indigo-600 transition text-sm">
+              Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End of Navigation Bar -->
