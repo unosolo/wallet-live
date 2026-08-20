@@ -2,7 +2,7 @@
 
 A web application built with Rust that provides user asset management with REST API and web interface.
 
-The application was created using feature approach, where model, controllers, services and repositoryes are grouped by domain or as its name says by feature (ex. User, Asset, etc..)
+The application was created using feature approach, where model, controllers, services and repositories are grouped by domain or as its name says by feature (ex. User, Asset, etc..). This project has a learning process only.
 
 ## Features
 
@@ -30,17 +30,17 @@ cd wallet-live
 
 ### Initial requirements
 - A `Postgres` database must be provided before running the app.
+- Apply the migration on the database using sqlx. Install sqlx first. Then run `cargo sqlx migrate run` once.
 - The commands in the `makefile` facilitate the creation and running of Postgres container.
 - Containers are created using `wslc` containers, so the commands must be run in Windows terminal.
   - Make commands useful:
     - `make setup` (run once)
-    - `make run` (run once or when needed to recreate the containers)
+    - `make run` (run once)
     - `make restart` (to stop and start the containers)
 
 Start the application with:
 
 ```bash
-cargo sqlx migrate run
 cargo run
 ```
 
